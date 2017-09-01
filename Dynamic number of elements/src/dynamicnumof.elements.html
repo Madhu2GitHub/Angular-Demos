@@ -1,0 +1,11 @@
+<input type="button" value="Add" (click)="addElement()">
+
+
+<form (ngSubmit)="onSubmit(ruleForm.value)" #ruleForm="ngForm">
+    <div *ngFor="#d of data;#i=index">
+        <input type="text" name="rule" [(ngModel)]="d.key"> <input type="button" value="remove" (click)="removeElement()">
+    </div>
+    <input type="submit">
+</form>
+
+
